@@ -19,6 +19,10 @@ the project contain two api solution
 
 Frontend Project (Angular) :
  It is a Angular project which display towers data in the table with different columns from the api and with Bar chart from Chartjs.
+  How to run?
+  1- Open the project 
+  2- In terminal, type "ng serve" command to run the project.
+  3- On the browser, Type this Url "https://localhost:4200" and press enter to display.
  
  
  If you face any issue with files, you can download them from Google drive:
