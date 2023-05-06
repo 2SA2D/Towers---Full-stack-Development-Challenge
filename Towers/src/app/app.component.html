@@ -1,0 +1,112 @@
+
+  
+  <!--Create tab section -->
+  <div style="padding: 3em;">
+    <mat-tab-group [backgroundColor]="'primary'" mat-stretch-tabs="" [color]="'warn'">
+      <!-- Bar chart tab -->
+      <mat-tab [label]="'Barchart'">
+        <div class="">
+          <div Class="">
+            <!--Create Canvas to display the Bar Chart-->
+            <canvas id="Barchart"></canvas>
+          </div>
+      </div>
+      </mat-tab>
+      
+      <!-- Table Tab -->
+      <mat-tab [disabled]="false" [label]="'Table'">
+        <!-- Create a fliter input  -->
+        <mat-form-field appearance="fill" style="padding: 15px;">
+          <!-- Display a label -->
+          <mat-label> Filter Table</mat-label>
+          <!-- activite fliter input and make a refrence -->
+          <input matInput placeholder="" search (keyup)="filter($event)" #inputdata/>
+        </mat-form-field>
+        
+        <!-- Table section -->
+        <div>
+          <!-- define the table and connect it to the data -->
+         <table mat-table matSort [dataSource]="data_Source">
+          <!-- tower_id column  -->
+          <ng-container matColumnDef="tower_id">
+            <!-- header of tower_id column --> 
+            <th mat-header-cell *matHeaderCellDef="" mat-sort-header=""> Tower ID </th>
+            <!-- define tower_id data from data source -->
+            <td mat-cell *matCellDef="let row"> {{row.tower_id}} </td>
+          </ng-container>
+
+
+         <!-- tower_type column  -->
+          <ng-container matColumnDef="tower_type"> 
+             <!-- header of tower_type column --> 
+            <th mat-header-cell *matHeaderCellDef="" mat-sort-header=""> Tower Type </th>
+            <!-- define tower_type data from data source -->
+            <td mat-cell *matCellDef="let row"> {{row.tower_type}} </td>
+          </ng-container>
+            
+          <!-- operator column  -->
+            <ng-container matColumnDef="operator"> 
+              <!-- header of operator column --> 
+              <th mat-header-cell *matHeaderCellDef="" mat-sort-header=""> Operator </th>
+              <!-- define operator data from data source -->
+              <td mat-cell *matCellDef="let row"> {{row.operator}} </td>
+            </ng-container>
+            
+            <!-- address column  -->
+            <ng-container matColumnDef="address"> 
+               <!-- header of address column -->
+              <th mat-header-cell *matHeaderCellDef="" mat-sort-header=""> Address </th>
+              <!-- define address data from data source -->
+              <td mat-cell *matCellDef="let row"> {{row.address}}</td>
+            </ng-container>
+            
+        
+            <!-- height column  -->
+            <ng-container matColumnDef="height"> 
+               <!-- header of height column -->
+              <th mat-header-cell *matHeaderCellDef="" mat-sort-header=""> height </th>
+              <!-- define height data from data source -->
+              <td mat-cell *matCellDef="let row"> {{row.height}} </td>
+            </ng-container>
+            
+             <!-- latitude column  -->
+            <ng-container matColumnDef="latitude"> 
+              <!-- header of latitude column -->
+              <th mat-header-cell *matHeaderCellDef="" mat-sort-header=""> Latitude </th>
+              <!-- define latitude data from data source -->
+              <td mat-cell *matCellDef="let row"> {{row.latitude}} </td>
+            </ng-container>
+        
+            <!-- longitude column  -->
+            <ng-container matColumnDef="longitude"> 
+               <!-- header of longitude column -->
+              <th mat-header-cell *matHeaderCellDef="" mat-sort-header=""> longitude </th>
+              <!-- define longitude data from data source -->
+              <td mat-cell *matCellDef="let row"> {{row.longitude}} </td>
+            </ng-container>
+            
+            <!-- technology column  -->
+            <ng-container matColumnDef="technology"> 
+              <!-- header of Technology column -->
+              <th mat-header-cell *matHeaderCellDef="" mat-sort-header=""> Technology </th>
+              <!-- define technology data from data source -->
+              <td mat-cell *matCellDef="let row"> {{row.technology}} </td>
+            </ng-container>
+        
+            <!-- Header of Table -->
+            <tr mat-header-row *matHeaderRowDef="_columns"> </tr>
+            <tr mat-row *matRowDef="let row; columns: _columns"></tr> 
+            
+            <!-- if data not found in table, display error  -->
+            <tr *matNoDataRow="">
+              <td class="mat-cell" colspan="4">Sorry, {{inputdata.value}} does not match any information of towers.</td>
+            </tr>
+            <!-- end of table section -->
+         </table>
+         <!-- select the number of data shown in the table -->
+         <mat-paginator [pageSizeOptions]="[5,10,25,100]" aria-label="Select page of Towers"></mat-paginator>
+        </div>
+      
+      </mat-tab>
+    </mat-tab-group>
+  </div>
