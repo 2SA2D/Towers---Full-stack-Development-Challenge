@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Towers-api-normal", "WebApplication1\Towers-api-normal.csproj", "{D5940508-0BAA-4EEF-8C87-CCF2C9641277}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Towers-api--Swagger", "..\Towers-api-Swagger\Towers-api--Swagger.csproj", "{06709529-A8B9-4954-AFE9-42ABA3AC5ED9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5940508-0BAA-4EEF-8C87-CCF2C9641277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5940508-0BAA-4EEF-8C87-CCF2C9641277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5940508-0BAA-4EEF-8C87-CCF2C9641277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5940508-0BAA-4EEF-8C87-CCF2C9641277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06709529-A8B9-4954-AFE9-42ABA3AC5ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06709529-A8B9-4954-AFE9-42ABA3AC5ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06709529-A8B9-4954-AFE9-42ABA3AC5ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06709529-A8B9-4954-AFE9-42ABA3AC5ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D17B2FFF-22E0-446E-8173-40560BF04C42}
+	EndGlobalSection
+EndGlobal
